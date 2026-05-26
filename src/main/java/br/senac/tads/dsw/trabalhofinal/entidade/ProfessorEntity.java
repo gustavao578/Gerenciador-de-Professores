@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "tb_professores")
 public class ProfessorEntity {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -24,7 +24,11 @@ public class ProfessorEntity {
 
     @Column(nullable = false, length = 50)
     private String disciplina;
-    
+
+	@Column(length = 255)
+	private String observacoes;
+
+
     @Column(nullable = false)
     private boolean ativo;
 
@@ -60,6 +64,14 @@ public class ProfessorEntity {
         this.disciplina = disciplina;
     }
 
+	public String getObservacoes() {
+		return observacoes;
+	}
+
+	public void setObservacoes(String observacoes) {
+		this.observacoes = observacoes;
+	}
+
     public boolean isAtivo() {
         return ativo;
     }
@@ -68,6 +80,6 @@ public class ProfessorEntity {
         this.ativo = ativo;
     }
 
-    
+
 
 }

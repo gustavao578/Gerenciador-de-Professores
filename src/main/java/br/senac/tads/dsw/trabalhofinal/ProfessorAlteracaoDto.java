@@ -16,8 +16,10 @@ public class ProfessorAlteracaoDto {
     @Size(min = 5, max = 50, message = "A disciplina do professor deve conter entre 5 e 100 caracteres")
     private String disciplina;
 
+	private String observacoes;
+
     private boolean ativo;
-    
+
 
     public String getNome() {
         return nome;
@@ -43,6 +45,10 @@ public class ProfessorAlteracaoDto {
         this.disciplina = disciplina;
     }
 
+	public String getObservacoes() { return observacoes; }
+
+	public void setObservacoes(String observacoes) { this.observacoes = observacoes; }
+
     public boolean isAtivo() {
         return ativo;
     }
@@ -50,4 +56,6 @@ public class ProfessorAlteracaoDto {
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
     }
+
+
 }

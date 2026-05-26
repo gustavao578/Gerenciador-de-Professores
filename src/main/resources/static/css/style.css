@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h2 { text-align: center; color: #333; }
+h3 { color: #333; margin-top: 20px; }
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    flex: 1;
+    width: 100%;
+}
+
+.footer {
+    background-color: #7f7f7f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    font-size: 14px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-info p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.badge-desativado {
+    background-color: #ed7d31;
+    color: white;
+    padding: 3px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-left: 10px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.btn {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.btn-blue { background-color: #5b9bd5; }
+.btn-red { background-color: #c00000; }
+.btn-gray { background-color: #ccc; color: black; }
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    width: 90px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.form-group label {
+    width: 150px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+}
+
+.radio-group {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group label {
+    width: auto;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.alert {
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.alert-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+.alert-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+.hidden { display: none; }

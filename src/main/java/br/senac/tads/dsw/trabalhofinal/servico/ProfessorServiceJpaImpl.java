@@ -15,7 +15,7 @@ import br.senac.tads.dsw.trabalhofinal.repositorio.ProfessorRepository;
 
 @Service
 public class ProfessorServiceJpaImpl implements ProfessorService {
-    
+
     private final ProfessorRepository professorRepository;
 
     public ProfessorServiceJpaImpl(ProfessorRepository professorRepository) {
@@ -63,6 +63,7 @@ public class ProfessorServiceJpaImpl implements ProfessorService {
 
         entity.setNome(professorAlteracao.getNome());
         entity.setMatricula(professorAlteracao.getMatricula());
+		entity.setObservacoes(professorAlteracao.getObservacoes());
         entity.setDisciplina(professorAlteracao.getDisciplina());
         entity.setAtivo(professorAlteracao.isAtivo());
 
@@ -86,6 +87,7 @@ public class ProfessorServiceJpaImpl implements ProfessorService {
         dto.setId(entity.getId().intValue());
         dto.setNome(entity.getNome());
         dto.setMatricula(entity.getMatricula());
+		dto.setObservacoes(entity.getObservacoes());
         dto.setDisciplina(entity.getDisciplina());
         dto.setAtivo(entity.isAtivo());
 
@@ -96,10 +98,11 @@ public class ProfessorServiceJpaImpl implements ProfessorService {
         ProfessorEntity entity = new ProfessorEntity();
         entity.setNome(dto.getNome());
         entity.setMatricula(dto.getMatricula());
+		entity.setObservacoes(dto.getObservacoes());
         entity.setDisciplina(dto.getDisciplina());
         entity.setAtivo(dto.isAtivo());
 
         return entity;
     }
-}   
-    
+}
+
