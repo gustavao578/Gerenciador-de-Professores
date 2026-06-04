@@ -63,12 +63,13 @@ function voltarListagem() {
 function salvarProfessor(event) {
     event.preventDefault();
     const id = document.getElementById('prof-id').value;
+    const radioAtivo = document.querySelector('input[name="ativo"]:checked');
     const professor = {
         nome: document.getElementById('prof-nome').value,
         matricula: document.getElementById('prof-matricula').value,
         disciplina: document.getElementById('prof-disciplina').value,
         observacoes: document.getElementById('prof-observacoes').value,
-        ativo: document.querySelector('input[name="ativo"]:checked').value === 'true'
+        ativo: radioAtivo ? radioAtivo.value === 'true' : false 
     };
 
     const method = id ? 'PUT' : 'POST';
