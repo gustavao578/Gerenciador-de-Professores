@@ -26,7 +26,7 @@ import br.senac.tads.dsw.trabalhofinal.NaoEncontradoException;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/professores")
+@RequestMapping("/api/professores")
 public class ProfessorController {
 
 	private final ProfessorService professorService;

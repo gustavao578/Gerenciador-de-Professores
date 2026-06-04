@@ -1,4 +1,4 @@
-const API_URL = '/professores';
+const API_URL = '/api/professores';
 
 document.addEventListener("DOMContentLoaded", carregarProfessores);
 
